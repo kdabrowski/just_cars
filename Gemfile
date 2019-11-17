@@ -33,6 +33,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   gem 'pry', '~> 0.12'
   gem 'pry-nav', '~> 0.3'
+  gem 'factory_bot_rails'
+  gem 'faker', '~> 2.7'
 end
 
 group :development do
