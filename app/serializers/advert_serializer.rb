@@ -1,3 +1,8 @@
 class AdvertSerializer < ActiveModel::Serializer
-  attributes :id, :title, :description, :price, :car_foto, :created_at
+  include Rails.application.routes.url_helpers
+  attributes :id, :title, :description, :price, :created_at, :foto_url
+
+  def foto_url
+    rails_blob_url(object.car_foto)
+  end
 end
