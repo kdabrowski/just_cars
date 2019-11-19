@@ -6,7 +6,7 @@ class Advert < ApplicationRecord
   scope :greater, ->(amount) { where('price >= ?', amount) }
   scope :lower, ->(amount) { where('price <= ?', amount) }
 
-  validates_presence_of :description, :title, :price, :car_foto, :description
+  validates_presence_of :description, :title, :price, :car_foto
   validate :picture_type_valid?
 
 

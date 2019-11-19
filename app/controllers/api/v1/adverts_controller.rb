@@ -17,7 +17,7 @@ class Api::V1::AdvertsController < ApplicationController
       advert.save
       render json: advert, status: :ok
     else
-      render json: { errors: advert.errors.full_messages.to_json }.to_json, status: :unprocessable_entity
+      render json: { errors: advert.errors.full_messages }.to_json, status: :unprocessable_entity
     end
   end
 
@@ -32,6 +32,6 @@ class Api::V1::AdvertsController < ApplicationController
   end
 
   def create_params
-    params.permit(:name, :title, :description, :car_foto, :price)
+    params.require(:advert).permit(:name, :title, :description, :car_foto, :price)
   end
 end
