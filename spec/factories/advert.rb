@@ -6,5 +6,6 @@ FactoryBot.define do
     description { Faker::Vehicle.standard_specs }
     car_foto { fixture_file_upload(Rails.root.join('spec', 'support', 'assets', "car-#{rand(1..9)}.jpg"), 'image/jpg') }
     price { Faker::Number.decimal(l_digits: 2) }
+    created_at { Faker::Date.between(from: 3.months.ago, to: Date.today) }
   end
 end
