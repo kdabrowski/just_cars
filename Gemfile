@@ -32,6 +32,10 @@ gem 'active_model_serializers', '~> 0.10.0'
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
 
+# pagination
+gem 'kaminari'
+gem 'api-pagination'
+
 group :development, :test do
   gem 'pry', '~> 0.12'
   gem 'pry-nav', '~> 0.3'
