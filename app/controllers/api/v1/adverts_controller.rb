@@ -17,7 +17,7 @@ class Api::V1::AdvertsController < ApplicationController
       advert.save
       render json: advert, status: :ok
     else
-      render json: advert.errors.full_messages.to_json, status: :unprocessable_entity
+      render json: { errors: advert.errors.full_messages.to_json }.to_json, status: :unprocessable_entity
     end
   end
 
