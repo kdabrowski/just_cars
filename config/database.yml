@@ -19,8 +19,4 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: just_cars_development
-
-production:
-  <<: *default
-  database: just_cars_development
+  database: just_cars_test
